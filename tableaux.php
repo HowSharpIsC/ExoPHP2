@@ -2,7 +2,6 @@
 
 $tab = array();
 $compteur = 0;
-//$compteurTotal = 0;
 
 for($i = 0; $i < 100; $i++)
 {
@@ -21,12 +20,19 @@ for($i = 0; $i <= 100; $i++)
         }
     }
 
-    //$compteurTotal += $compteur;
+    echo "<span";
 
-    echo "La valeur " . $i . " est présente " . $compteur . " fois.";
+    if ($compteur > 2)
+    {
+        ?>
+
+         style = "background-color : red; border : solid 1px black;"
+
+        <?php
+    }
+
+    echo "> La valeur " . $i . " est présente " . $compteur . " fois. </span>";
     echo "<br>";
 }
-
-//echo $compteurTotal;
 
 ?>
